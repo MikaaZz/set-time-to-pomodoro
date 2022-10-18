@@ -1,20 +1,13 @@
 import React, { useState } from "react";
+import { ITarefa } from "../../types/ITask";
+
 import Item from "./Item";
 import style from "./List.module.scss";
 
-function List() {
-  const [tarefas, setTarefas] = useState();
-
+function Lista({ tarefas }: { tarefas: ITarefa[] }) {
   return (
     <aside className={style.listaTarefas}>
-      <h2
-        onClick={() => {
-          setTarefas();
-        }}
-      >
-        {" "}
-        Estudos do dia{" "}
-      </h2>
+      <h2> Estudos do dia </h2>
       <ul>
         {tarefas.map((item, index) => (
           <Item key={index} {...item} />
@@ -24,4 +17,4 @@ function List() {
   );
 }
 
-export default List;
+export default Lista;

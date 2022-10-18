@@ -1,6 +1,7 @@
 import Botao from "../Button";
 import Relogio from "./Relogio";
 import style from "./Cronometro.module.scss";
+import Button from "../Button";
 
 export default function Cronometro() {
   return (
@@ -9,7 +10,7 @@ export default function Cronometro() {
       <div className={style.relogioWrapper}>
         <Relogio />
       </div>
-      <Botao>Começar!</Botao>
+      <Button>Começar!</Button>
     </div>
   );
 }
